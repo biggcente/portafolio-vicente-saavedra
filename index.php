@@ -77,7 +77,7 @@ $proyectos  = $pdo->query('SELECT * FROM proyectos WHERE activo = 1 ORDER BY ord
     </div>
 </section>
  
-<!-- SECCIÓN 2: HABILIDADES Y HERRAMIENTAS -->
+<!-- HABILIDADES Y HERRAMIENTAS -->
 <section id="habilidades" class="section-alt">
     <div class="container">
         <p class="section-label">02 — Habilidades y herramientas</p>
@@ -94,7 +94,7 @@ $proyectos  = $pdo->query('SELECT * FROM proyectos WHERE activo = 1 ORDER BY ord
     </div>
 </section>
  
-<!-- SECCIÓN 3: TECNOLOGÍAS DOMINADAS -->
+<!-- TECNOLOGÍAS DOMINADAS -->
 <section id="tecnologias">
     <div class="container">
         <p class="section-label">03 — Tecnologías dominadas</p>
@@ -114,7 +114,7 @@ $proyectos  = $pdo->query('SELECT * FROM proyectos WHERE activo = 1 ORDER BY ord
     </div>
 </section>
  
-<!-- SECCIÓN 4: PROYECTOS REALIZADOS -->
+<!-- PROYECTOS REALIZADOS -->
 <section id="proyectos" class="section-alt">
     <div class="container">
         <p class="section-label">04 — Proyectos realizados</p>
@@ -152,7 +152,7 @@ $proyectos  = $pdo->query('SELECT * FROM proyectos WHERE activo = 1 ORDER BY ord
     </div>
 </section>
  
-<!-- SECCIÓN 5: FORMULARIO DE CONTACTO -->
+<!-- FORMULARIO DE CONTACTO -->
 <section id="contacto">
     <div class="container">
         <p class="section-label">05 — Formulario de contacto</p>
