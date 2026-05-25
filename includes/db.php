@@ -5,8 +5,8 @@
 
 define('DB_HOST', 'localhost');
 define('DB_NAME', 'portafolio_db');
-define('DB_USER', 'root');       // Cambiar según tu entorno
-define('DB_PASS', '');           // Cambiar según tu entorno
+define('DB_USER', 'root');      
+define('DB_PASS', '');           
 define('DB_CHARSET', 'utf8mb4');
 
 function getDB(): PDO {

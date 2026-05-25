@@ -1,10 +1,7 @@
--- ============================================================
 -- PORTAFOLIO WEB PROFESIONAL — Vicente Saavedra
--- Base de datos: portafolio_db
--- ============================================================
 
-CREATE DATABASE IF NOT EXISTS portafolio_db CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-USE portafolio_db;
+
+USE vsaavedra_db3;
 
 -- ------------------------------------------------------------
 -- TABLA: usuarios (admin del sistema)
@@ -94,7 +91,7 @@ CREATE TABLE IF NOT EXISTS mensajes (
 
 -- Usuario admin (password: Admin1234)
 INSERT INTO usuarios (nombre, email, password) VALUES
-('Vicente Saavedra', 'admin@portafolio.cl', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi');
+('Vicente Saavedra', 'rockitchy@gmail.com', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi');
 
 -- Biografía inicial
 INSERT INTO biografia (nombre, titulo, descripcion, email, telefono, ciudad, github_url, linkedin_url) VALUES

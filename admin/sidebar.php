@@ -1,7 +1,6 @@
 <?php
-// ============================================================
-// admin/sidebar.php — Sidebar reutilizable
-// ============================================================
+
+
 $current = basename($_SERVER['PHP_SELF']);
 $pdo2 = getDB();
 $unread = $pdo2->query('SELECT COUNT(*) FROM mensajes WHERE leido=0')->fetchColumn();

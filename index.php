@@ -3,9 +3,9 @@
 // index.php — Portafolio público
 // ============================================================
 require_once 'includes/db.php';
-
+ 
 $pdo = getDB();
-
+ 
 // Cargar datos de la BD
 $bio        = $pdo->query('SELECT * FROM biografia LIMIT 1')->fetch();
 $habilidades = $pdo->query('SELECT * FROM habilidades WHERE activo = 1 ORDER BY orden')->fetchAll();
@@ -23,7 +23,7 @@ $proyectos  = $pdo->query('SELECT * FROM proyectos WHERE activo = 1 ORDER BY ord
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-
+ 
 <!-- ======================================================
      NAVBAR
      ====================================================== -->
@@ -49,7 +49,7 @@ $proyectos  = $pdo->query('SELECT * FROM proyectos WHERE activo = 1 ORDER BY ord
         </div>
     </div>
 </nav>
-
+ 
 <!-- ======================================================
      SECCIÓN 1: BIOGRAFÍA
      ====================================================== -->
@@ -66,18 +66,7 @@ $proyectos  = $pdo->query('SELECT * FROM proyectos WHERE activo = 1 ORDER BY ord
                     </div>
                 <?php endif; ?>
                 <div class="bio-socials mt-3">
-                    <?php if ($bio && $bio['github_url']): ?>
-                        <a href="<?= htmlspecialchars($bio['github_url']) ?>" target="_blank"><i class="bi bi-github"></i></a>
-                    <?php endif; ?>
-                    <?php if ($bio && $bio['linkedin_url']): ?>
-                        <a href="<?= htmlspecialchars($bio['linkedin_url']) ?>" target="_blank"><i class="bi bi-linkedin"></i></a>
-                    <?php endif; ?>
-                    <?php if ($bio && $bio['instagram_url']): ?>
-                        <a href="<?= htmlspecialchars($bio['instagram_url']) ?>" target="_blank"><i class="bi bi-instagram"></i></a>
-                    <?php endif; ?>
-                    <?php if ($bio && $bio['email']): ?>
-                        <a href="mailto:<?= htmlspecialchars($bio['email']) ?>"><i class="bi bi-envelope"></i></a>
-                    <?php endif; ?>
+                    <a href="https://github.com/biggcente" target="_blank"><i class="bi bi-github"></i></a>
                 </div>
             </div>
             <div class="col-md-9">
@@ -93,7 +82,7 @@ $proyectos  = $pdo->query('SELECT * FROM proyectos WHERE activo = 1 ORDER BY ord
         </div>
     </div>
 </section>
-
+ 
 <!-- ======================================================
      SECCIÓN 2: HABILIDADES Y HERRAMIENTAS
      ====================================================== -->
@@ -112,7 +101,7 @@ $proyectos  = $pdo->query('SELECT * FROM proyectos WHERE activo = 1 ORDER BY ord
         </div>
     </div>
 </section>
-
+ 
 <!-- ======================================================
      SECCIÓN 3: TECNOLOGÍAS DOMINADAS
      ====================================================== -->
@@ -134,7 +123,7 @@ $proyectos  = $pdo->query('SELECT * FROM proyectos WHERE activo = 1 ORDER BY ord
         </div>
     </div>
 </section>
-
+ 
 <!-- ======================================================
      SECCIÓN 4: PROYECTOS REALIZADOS
      ====================================================== -->
@@ -174,7 +163,7 @@ $proyectos  = $pdo->query('SELECT * FROM proyectos WHERE activo = 1 ORDER BY ord
         </div>
     </div>
 </section>
-
+ 
 <!-- ======================================================
      SECCIÓN 5: FORMULARIO DE CONTACTO
      ====================================================== -->
@@ -209,7 +198,7 @@ $proyectos  = $pdo->query('SELECT * FROM proyectos WHERE activo = 1 ORDER BY ord
         </div>
     </div>
 </section>
-
+ 
 <!-- ======================================================
      FOOTER
      ====================================================== -->
@@ -255,7 +244,7 @@ $proyectos  = $pdo->query('SELECT * FROM proyectos WHERE activo = 1 ORDER BY ord
         </div>
     </div>
 </footer>
-
+ 
 <!-- ======================================================
      MODAL LOGIN
      ====================================================== -->
@@ -291,7 +280,7 @@ $proyectos  = $pdo->query('SELECT * FROM proyectos WHERE activo = 1 ORDER BY ord
         </div>
     </div>
 </div>
-
+ 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="assets/js/main.js"></script>
 </body>
