@@ -1,7 +1,7 @@
 <?php
-// ============================================================
-// includes/db.php — Conexión a la base de datos (PDO)
-// ============================================================
+
+// includes/db.php — Conexión a la base de datos 
+
 
 define('DB_HOST', 'localhost');
 define('DB_NAME', 'portafolio_db');

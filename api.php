@@ -1,7 +1,7 @@
 <?php
-// ============================================================
+
 // api.php — Endpoints AJAX: login + contacto
-// ============================================================
+
 require_once 'includes/db.php';
 require_once 'includes/auth.php';
 
@@ -11,9 +11,8 @@ $action = $_POST['action'] ?? $_GET['action'] ?? '';
 
 switch ($action) {
 
-    // ----------------------------------------------------------
     // LOGIN
-    // ----------------------------------------------------------
+
     case 'login':
         $email    = trim($_POST['email']    ?? '');
         $password = trim($_POST['password'] ?? '');
@@ -31,9 +30,9 @@ switch ($action) {
         }
         break;
 
-    // ----------------------------------------------------------
+
     // CONTACTO
-    // ----------------------------------------------------------
+
     case 'contacto':
         $nombre  = clean($_POST['nombre']  ?? '');
         $email   = clean($_POST['email']   ?? '');
@@ -55,9 +54,9 @@ switch ($action) {
         jsonResponse(true, '¡Mensaje enviado con éxito! Te responderé pronto.');
         break;
 
-    // ----------------------------------------------------------
+
     // LOGOUT
-    // ----------------------------------------------------------
+
     case 'logout':
         logout();
         break;

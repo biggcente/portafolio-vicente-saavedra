@@ -1,8 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-  // ----------------------------------------------------------
   // Animación de barras de tecnología al cargar
-  // ----------------------------------------------------------
+
   const bars = document.querySelectorAll('.tech-bar');
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -16,9 +15,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   bars.forEach(bar => observer.observe(bar));
 
-  // ----------------------------------------------------------
   // Navbar: cambio de fondo al hacer scroll
-  // ----------------------------------------------------------
+
   const nav = document.getElementById('mainNav');
   window.addEventListener('scroll', () => {
     nav.style.background = window.scrollY > 50
@@ -26,9 +24,9 @@ document.addEventListener('DOMContentLoaded', () => {
       : 'rgba(10,10,15,0.95)';
   });
 
-  // ----------------------------------------------------------
+
   // LOGIN — AJAX
-  // ----------------------------------------------------------
+
   const btnLogin   = document.getElementById('btnLogin');
   const loginAlert = document.getElementById('loginAlert');
 
@@ -75,9 +73,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ----------------------------------------------------------
+  
   // FORMULARIO DE CONTACTO — AJAX
-  // ----------------------------------------------------------
+
   const btnEnviar   = document.getElementById('btnEnviar');
   const contactAlert = document.getElementById('contactAlert');
 
@@ -122,9 +120,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ----------------------------------------------------------
+  
   // Helpers
-  // ----------------------------------------------------------
+
   function showAlert(el, msg, type) {
     el.className = `alert alert-${type}`;
     el.textContent = msg;

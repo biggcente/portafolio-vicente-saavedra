@@ -1,11 +1,6 @@
--- PORTAFOLIO WEB PROFESIONAL — Vicente Saavedra
-
-
 USE vsaavedra_db3;
 
--- ------------------------------------------------------------
--- TABLA: usuarios (admin del sistema)
--- ------------------------------------------------------------
+
 CREATE TABLE IF NOT EXISTS usuarios (
     id          INT AUTO_INCREMENT PRIMARY KEY,
     nombre      VARCHAR(100)  NOT NULL,
@@ -14,9 +9,7 @@ CREATE TABLE IF NOT EXISTS usuarios (
     creado_en   TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
--- ------------------------------------------------------------
--- TABLA: biografia
--- ------------------------------------------------------------
+
 CREATE TABLE IF NOT EXISTS biografia (
     id          INT AUTO_INCREMENT PRIMARY KEY,
     nombre      VARCHAR(100)  NOT NULL,
@@ -33,33 +26,27 @@ CREATE TABLE IF NOT EXISTS biografia (
     actualizado_en TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
 
--- ------------------------------------------------------------
--- TABLA: habilidades
--- ------------------------------------------------------------
+
 CREATE TABLE IF NOT EXISTS habilidades (
     id          INT AUTO_INCREMENT PRIMARY KEY,
     nombre      VARCHAR(100)  NOT NULL,
-    icono       VARCHAR(50)   DEFAULT NULL,   -- emoji o clase de ícono
+    icono       VARCHAR(50)   DEFAULT NULL,  
     orden       INT           DEFAULT 0,
     activo      TINYINT(1)    DEFAULT 1,
     creado_en   TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
--- ------------------------------------------------------------
--- TABLA: tecnologias
--- ------------------------------------------------------------
+
 CREATE TABLE IF NOT EXISTS tecnologias (
     id          INT AUTO_INCREMENT PRIMARY KEY,
     nombre      VARCHAR(100)  NOT NULL,
-    nivel       INT           NOT NULL DEFAULT 50,  -- 0–100
+    nivel       INT           NOT NULL DEFAULT 50,  
     orden       INT           DEFAULT 0,
     activo      TINYINT(1)    DEFAULT 1,
     creado_en   TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
--- ------------------------------------------------------------
--- TABLA: proyectos
--- ------------------------------------------------------------
+
 CREATE TABLE IF NOT EXISTS proyectos (
     id          INT AUTO_INCREMENT PRIMARY KEY,
     titulo      VARCHAR(150)  NOT NULL,
@@ -72,9 +59,7 @@ CREATE TABLE IF NOT EXISTS proyectos (
     creado_en   TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
--- ------------------------------------------------------------
--- TABLA: mensajes (formulario de contacto)
--- ------------------------------------------------------------
+
 CREATE TABLE IF NOT EXISTS mensajes (
     id          INT AUTO_INCREMENT PRIMARY KEY,
     nombre      VARCHAR(100)  NOT NULL,
@@ -85,15 +70,12 @@ CREATE TABLE IF NOT EXISTS mensajes (
     creado_en   TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
--- ============================================================
--- DATOS DE EJEMPLO
--- ============================================================
 
--- Usuario admin (password: Admin1234)
+
+
 INSERT INTO usuarios (nombre, email, password) VALUES
 ('Vicente Saavedra', 'rockitchy@gmail.com', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi');
 
--- Biografía inicial
 INSERT INTO biografia (nombre, titulo, descripcion, email, telefono, ciudad, github_url, linkedin_url) VALUES
 (
     'Vicente Saavedra',
@@ -106,7 +88,7 @@ INSERT INTO biografia (nombre, titulo, descripcion, email, telefono, ciudad, git
     'https://linkedin.com/in/vicente'
 );
 
--- Habilidades
+
 INSERT INTO habilidades (nombre, icono, orden) VALUES
 ('HTML',        '🌐', 1),
 ('CSS',         '🎨', 2),
@@ -117,7 +99,7 @@ INSERT INTO habilidades (nombre, icono, orden) VALUES
 ('GitHub',      '🐙', 7),
 ('IA Aplicada', '🤖', 8);
 
--- Tecnologías con nivel
+
 INSERT INTO tecnologias (nombre, nivel, orden) VALUES
 ('HTML',       90, 1),
 ('CSS',        80, 2),
@@ -128,7 +110,7 @@ INSERT INTO tecnologias (nombre, nivel, orden) VALUES
 ('GitHub',     70, 7),
 ('AJAX',       60, 8);
 
--- Proyectos de ejemplo
+
 INSERT INTO proyectos (titulo, descripcion, demo_url, github_url, orden) VALUES
 ('Sistema de Tareas',  'Aplicación web para gestionar tareas pendientes con PHP, MySQL y AJAX.', '#', '#', 1),
 ('Tienda Online',      'Sistema de comercio electrónico con carrito de compras y pasarela de pago.',  '#', '#', 2),
